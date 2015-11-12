@@ -9,7 +9,7 @@
 import acm.graphics.*;
 import acm.program.*;
 
-public class Repaso3 extends GraphicsProgram{
+public class Repaso4 extends GraphicsProgram{
 	
 	//declaro una variable de instancia para almacenar el rectánulo
 	//como es de instancia, se ve desde el init y desde el run
@@ -34,6 +34,6 @@ public class Repaso3 extends GraphicsProgram{
 		//la mitad exacta de la pantalla
 		distanciaX = getWidth()/2;
 		distanciaY = getHeight()/2;
-		rectangulo.setLocation(distanciaX - rectangulo.getWidth()/2, distanciaY - rectangulo.getHeight()/2);
+		rectangulo.setLocation(distanciaX, distanciaY);
 	}
 }
