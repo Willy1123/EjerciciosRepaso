@@ -1,8 +1,8 @@
 /*
- * Repaso5 añade soporte al programa para poder escuchar
- * los clics del ratón
- * Lo que hará el programa es cambiar el color de relleno
- * aleatoriamente de un rectáungulo cada vez que se pulse click
+ * Repaso6
+ * es un programa que hace lo mismo que Repaso5
+ * pero que solo cambia el color del rectángulo
+ * si se hace clic dentro de él.
  */
 
 import java.awt.event.MouseEvent;
@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.RandomGenerator;
-public class Repaso5 extends GraphicsProgram{
+public class Repaso6 extends GraphicsProgram{
 
 	//declaro una variable de instancia para guardar el rectángulo
 	GRect rectangulo;
@@ -34,7 +34,12 @@ public class Repaso5 extends GraphicsProgram{
 	//añado el método que escucha el evento del clic del ratón
 	
 	public void mouseClicked(MouseEvent evento) {
-		if (evento.getButton() == MouseEvent.BUTTON1){
+		
+		//si en la posición en la que se ha hecho clic
+		//está en l rectángulo entonces lo relleno
+		
+		//la función se llama getElement
+		if (getElementAt(evento.getX(), evento.getY()) == rectangulo) {
 		rectangulo.setFilled(true);
 		rectangulo.setFillColor(aleatorio.nextColor());
 		}
