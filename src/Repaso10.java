@@ -1,7 +1,7 @@
 /*
- * Repaso9
- * Cuando hago click en la mitad superior del rectángulo, este se mueve hacia arriba,
- * y si hago click en la mitad inferior, el rectángulo se mueve hacia abajo
+ * Repaso10
+ * Mueve el rectángulo en diagonal, dependiendo en que cuadrante
+ * del rectángulo hagas click.
  */
 
 import java.awt.event.MouseEvent;
