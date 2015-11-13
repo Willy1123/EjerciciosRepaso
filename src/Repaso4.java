@@ -34,6 +34,6 @@ public class Repaso4 extends GraphicsProgram{
 		//la mitad exacta de la pantalla
 		distanciaX = getWidth()/2;
 		distanciaY = getHeight()/2;
-		rectangulo.setLocation(distanciaX, distanciaY);
+		rectangulo.setLocation(distanciaX - rectangulo.getWidth()/2, distanciaY - rectangulo.getHeight()/2);
 	}
 }
