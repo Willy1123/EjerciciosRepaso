@@ -1,7 +1,7 @@
 /*
- * Repaso8
- * Cuando hago click en la mitad derecha del rectángulo, este se mueve a la derecha,
- * y si hago click en la mitad izquierda, el rectángulo se mueve a la izquierda
+ * Repaso9
+ * Cuando hago click en la mitad superior del rectángulo, este se mueve hacia arriba,
+ * y si hago click en la mitad inferior, el rectángulo se mueve hacia abajo
  */
 
 import java.awt.event.MouseEvent;
@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.RandomGenerator;
-public class Repaso8 extends GraphicsProgram{
+public class Repaso9 extends GraphicsProgram{
 
 	//declaro una variable de instancia para guardar el rectángulo
 	GRect rectangulo;
@@ -18,7 +18,7 @@ public class Repaso8 extends GraphicsProgram{
 
 	public void init() {
 		setSize(800,600);
-		rectangulo = new GRect(120, 80);
+		rectangulo = new GRect(120, 100);
 		//inserto el "escuchador" del ratón
 		addMouseListeners();
 	}
@@ -40,13 +40,13 @@ public class Repaso8 extends GraphicsProgram{
 		//la función se llama getElement
 		if (getElementAt(evento.getX(), evento.getY()) == rectangulo) {
 			double distanciaAlCentroDelRectangulo =
-					evento.getX() - rectangulo.getX();
+					evento.getY() - rectangulo.getY();
 			
-			if(distanciaAlCentroDelRectangulo < rectangulo.getWidth()/2) {
-			rectangulo.move(-20, 0);
+			if(distanciaAlCentroDelRectangulo < rectangulo.getHeight()/2) {
+			rectangulo.move(0, -20);
 			}
 			else{
-				rectangulo.move(20, 0);
+				rectangulo.move(0, 20);
 			}
 			rectangulo.setFilled(true);
 			rectangulo.setFillColor(aleatorio.nextColor());
